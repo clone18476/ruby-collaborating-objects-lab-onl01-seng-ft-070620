@@ -17,7 +17,7 @@ class Song
     end
 
     def self.new_by_filename(filename) # filename:  "artist_name - song_title" w/o extention
-        (artistname, name) = filename.split(" - ") # separating the artist name and title of song
+        (artistname, name) = filename.split(" - ") # separate artist name and song title
         song = Song.new(name)
         song.artist = Artist.find_or_create_by_name(artistname)
         song
@@ -35,3 +35,10 @@ class Song
         self.artist = Artist.find_or_create_by_name(artistname)
     end
 end
+
+
+ #describe '#initialize with a name' do it 'accepts a name for the song and makes it accessible through an attribute accessor
+ 
+ #  describe '#artist=' do it 'sets the artist object to belong to the song' do
+ 
+ #  describe '.all' do it 'returns all existing Song instances' do

@@ -1,5 +1,6 @@
 describe 'Artist' do
 
+
   before(:example) {
     Artist.class_variable_set(:@@all, [])
   }
@@ -12,6 +13,8 @@ describe 'Artist' do
     end
   end
 
+
+
   describe '#name=' do
     it 'sets the artist name' do
       artist = Artist.new('Michael Jackson')
@@ -19,6 +22,8 @@ describe 'Artist' do
       expect(artist.name).to eq('King of Pop')
     end
   end
+
+
 
   describe '.all' do
     it 'returns all existing Artist instances' do
@@ -28,6 +33,7 @@ describe 'Artist' do
       expect(Artist.all).to eq([artist, prince])
     end
   end
+
 
   describe '#add_song' do
     it 'keeps track of an artist\'s songs' do

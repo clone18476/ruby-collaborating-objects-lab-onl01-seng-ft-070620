@@ -9,7 +9,7 @@ class MP3Importer
 
     @files_arr = []
 
-    def initialize(path) #initialize with path 
+    def initialize(path)
         @path = path
         self.files
     end
